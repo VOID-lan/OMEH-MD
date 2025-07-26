@@ -1,0 +1,37 @@
+{
+  "name": "OMEH-MD",
+  "description": "OMEH MD — 𝘿𝙤 𝙮𝙤𝙪 𝙠𝙣𝙤𝙬 𝙒𝙞𝙘𝙠𝙚𝙙𝙣𝙚𝙨𝙨? 🜏 𝐈’𝐌 𝐇𝐈𝐌.",
+  "logo": "https://i.ibb.co/nqsRcKDB/Xploader4.jpg",
+  "keywords": ["whatsapp", "bot", "omeh-md", "Wicked Omeh", "Baileys"],
+  "repository": "https://github.com/VOID-lan/OMEH-MD",
+  "stack": "container",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "env": {
+    "SESSION_ID": {
+      "description": "Must begin with 'OMEH-MD:~' or 'WICKED-OMEH:~'.",
+      "value": "",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
